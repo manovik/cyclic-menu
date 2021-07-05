@@ -82,5 +82,3 @@ Arguments:
 5. a *number* - count of visible menu items on your screen
 
 Hope you'll enjoy using it.
-
-> If Something goes wrong, feel free to contact me or resize a page ;)
