@@ -1,0 +1,39 @@
+.slider {
+    display: flex;
+    justify-content: space-between;
+  &__track {
+    overflow-x: hidden;
+  }
+  &__prev,
+  &__next {
+    border: none;
+    border-radius: 6px;
+    background-color: transparent;
+    font-size: 2rem;
+    width: 0; 
+    height: 0;
+    filter: opacity(.3);
+    transition: filter .4s ease-in-out;
+    cursor: grab;
+    &:hover {
+      filter: opacity(1);
+    }
+    &:active {
+      cursor: grabbing;
+    }
+    &:disabled {
+      opacity: 0;
+      cursor: default;
+    }
+  }
+  &__prev {
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 20px solid green;
+  }
+  &__next {
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid green;
+  }
+}

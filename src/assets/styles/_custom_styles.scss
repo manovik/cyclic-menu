@@ -1,0 +1,159 @@
+.navigation {
+  margin: 0 auto;
+
+  &__list {
+    // display: flex;
+    // justify-content: center;
+    list-style: none;
+    padding: 0;
+    transition: transform .4s ease-in;
+  }
+
+  &__item {
+    display: inline-block;
+    position: relative;
+    font-family: 'ZCOOL KuaiLe', cursive;
+    font-size: 18px;
+    &:not(.activated) a:hover {
+      opacity: 1;
+      animation: blink 5s infinite;
+      &::after {
+        position: absolute;
+        bottom: -10%;
+        content: '';
+        height: 2px;
+        border-radius: 2px;
+        animation: underline 2.5s ease-in-out infinite;
+        background-color: black;
+      }
+    }
+
+    &.activated a{
+      opacity: 1;
+      color: transparent;
+      animation: rainbow 6s ease-in-out infinite;
+      cursor: default;
+    }
+  }
+  &__link {
+    text-decoration: none;
+    font-size: inherit;
+    color: inherit;
+    opacity: .8;
+    outline: none;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@keyframes blink {
+  from {
+    filter:invert(0%);
+  }
+  50% {
+    filter:invert(50%);
+  }
+  to {
+    filter:invert(0%);
+  }
+}
+
+@keyframes underline {
+  from {
+    left: 10%;
+    right: auto;
+    width: 0;
+  }
+  50% {
+    width: 80%;
+  }
+  to {
+    left: auto;
+    right: 10%;
+    width: 0;
+  }
+}
+
+
+@keyframes rainbow {
+  from {    
+    text-shadow:
+      -1px -1px 1px red,
+      -2px -2px 1px orange,
+      -3px -3px 1px yellow,
+      -4px -4px 1px green,
+      -5px -5px 1px lightskyblue,
+      -6px -6px 1px blue,
+      -7px -7px 1px blueviolet;
+  }
+  14.5% {
+    text-shadow:
+      -1px -1px 1px orange,
+      -2px -2px 1px yellow,
+      -3px -3px 1px green,
+      -4px -4px 1px lightskyblue,
+      -5px -5px 1px blue,
+      -6px -6px 1px blueviolet,
+      -7px -7px 1px red;
+  }
+  29% {
+    text-shadow:
+      -1px -1px 1px yellow,
+      -2px -2px 1px green,
+      -3px -3px 1px lightskyblue,
+      -4px -4px 1px blue,
+      -5px -5px 1px blueviolet,
+      -6px -6px 1px red,
+      -7px -7px 1px orange;
+  }
+  43.5% {
+    text-shadow:
+      -1px -1px 1px green,
+      -2px -2px 1px lightskyblue,
+      -3px -3px 1px blue,
+      -4px -4px 1px blueviolet,
+      -5px -5px 1px red,
+      -6px -6px 1px orange,
+      -7px -7px 1px yellow;
+  }
+  58% {
+    text-shadow:
+      -1px -1px 1px lightskyblue,
+      -2px -2px 1px blue,
+      -3px -3px 1px blueviolet,
+      -4px -4px 1px red,
+      -5px -5px 1px orange,
+      -6px -6px 1px yellow,
+      -7px -7px 1px green;
+  }
+  72.5% {
+    text-shadow:
+      -1px -1px 1px blue,
+      -2px -2px 1px blueviolet,
+      -3px -3px 1px red,
+      -4px -4px 1px orange,
+      -5px -5px 1px yellow,
+      -6px -6px 1px green,
+      -7px -7px 1px lightskyblue;
+  }
+  87% {
+    text-shadow:
+      -1px -1px 1px blueviolet,
+      -2px -2px 1px red,
+      -3px -3px 1px orange,
+      -4px -4px 1px yellow,
+      -5px -5px 1px green,
+      -6px -6px 1px lightskyblue,
+      -7px -7px 1px blue;
+  }
+  100% {
+    text-shadow:
+      -1px -1px 1px red,
+      -2px -2px 1px orange,
+      -3px -3px 1px yellow,
+      -4px -4px 1px green,
+      -5px -5px 1px lightskyblue,
+      -6px -6px 1px blue,
+      -7px -7px 1px blueviolet;
+  }
+}
